@@ -1,11 +1,15 @@
 *.log
 *.pot
 *.pyc
+*.env
 __pycache__/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
 media
+alembic.ini
+app/migration
+settings/
 
 # Distribution / packaging
 .Python
@@ -28,7 +32,8 @@ share/python-wheels/
 
 
 # Environments
-.env
+settings/.env
+settings/config.toml
 .venv
 env/
 venv/

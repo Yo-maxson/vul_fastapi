@@ -3,9 +3,7 @@ from .entities.pyd_models import Vulners
 from .entities.get_parse import get_cve_info_one
 from fastapi.responses import JSONResponse
 from fastapi.requests import Request
-from fastapi.exception_handlers import request_validation_exception_handler
 from fastapi.exceptions import RequestValidationError
-
 
 app = FastAPI()
 
@@ -58,3 +56,6 @@ async def create_vuln(cve_name: str):
         content={"message": f"Cve #{vulners.name} успешно создана "},
         headers={"X-Custom-Header": "Create_vuln"}
     )
+
+def foo():
+    print('bar')
