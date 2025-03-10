@@ -32,6 +32,7 @@ share/python-wheels/
 
 
 # Environments
+settings/
 settings/.env
 settings/config.toml
 .venv

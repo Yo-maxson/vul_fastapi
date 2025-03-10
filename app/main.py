@@ -30,11 +30,9 @@ async def root():
 async def say_hello(name: str):
     return {"message": f"Hello {name}"}
 
-
 @app.get("/vulners")
 def get_vulners():
     return {"Vulners": ["CVE-2025-0435", "CVE-2025-0442", "CVE-2025-0438"]}
-
 
 @app.get("/info_cve")
 async def get_cve_org(cve_name: str):
@@ -42,7 +40,6 @@ async def get_cve_org(cve_name: str):
         raise HTTPException(status_code=400, detail=f"Ошибка в именя CVE - {cve_name}")
     vulners = Vulners(**get_cve_info_one(cve_name))
     return {"message": "Результат поиска: ", "Cve": vulners}
-
 
 @app.post("/create_vuln/{cve_name}")
 async def create_vuln(cve_name: str):
