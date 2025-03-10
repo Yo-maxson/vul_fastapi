@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
-from .entities.pyd_models import Vulners
-from .entities.get_parse import get_cve_info_one
+
+from entities.pyd_models import Vulners
+from entities.get_parse import get_cve_info_one
 from fastapi.responses import JSONResponse
 from fastapi.requests import Request
 from fastapi.exceptions import RequestValidationError
